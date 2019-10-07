@@ -1,0 +1,97 @@
+.container {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  font-size: 18px;
+}
+
+.name_header {
+  background-color: darkcyan;
+  color: white;
+  text-align: center;
+  padding: 20px 30px 20px 60px;
+}
+.personal_info {
+  border-bottom: 4px solid red;
+  width: 28%;
+}
+
+.heading2,
+.sum_edu_heading {
+  border: 1px solid black;
+  border-radius: 11px;
+  text-align: center;
+  background-color: lightgrey;
+}
+h2:hover {
+  background-color: yellow;
+  color: red;
+}
+
+.para,
+ul {
+  border: 10px outset rgb(184, 221, 212);
+  padding: 50px;
+  margin: auto;
+  text-align: left;
+}
+
+.site_image {
+  width: 190px;
+  height: 130px;
+}
+
+.flexbox_container {
+  display: flex;
+  flex-direction: row;
+}
+.flexbox_item {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  border: 2px double black;
+  background-color: white;
+}
+
+.flexbox_item_1,
+.flexbox_item_2,
+.flexbox_item_3 {
+  min-height: 100px;
+  background-color: lightyellow;
+  font-family: Georgia;
+  font-size: 19px;
+}
+
+.Edu-Sum-flexbox-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.flex-item2 {
+  width: auto;
+  margin: 10px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.Sum_flexbox {
+  min-height: 126px;
+}
+
+.EDU_flexbox {
+  min-height: 100px;
+}
+
+/*Work Cited: 
+CSS-TRICKS. (2019, September 4). Retrieved from A complete Guide to Flexbox:
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Mollick, F. A. (n.d.). CodeSpeedy. Retrieved from Change text color on mouse hover: 
+    https://www.codespeedy.com/change-text-color-on-mouse-hover-css-code/
+
+Shields, M. (2013, may 20). CSS-TRICKS. Retrieved from Replace the Image in an <img> with CSS:
+     https://css-tricks.com/replace-the-image-in-an-img-with-css/
+
+*/
