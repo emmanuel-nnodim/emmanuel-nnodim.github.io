@@ -11,8 +11,8 @@
     <div class="wrapper">
       <div class="header">Test JSON page</div>
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
-      <button class="button" onclick="console.log('You haven\'t written a function yet!');">Click me to replace list
-        entries</button>
+      <p class = "ex"><button class="button" onclick="console.log(countries);">Click me to replace list
+        entries</button> </p>
       <div class="content">
         <ul class="instructions">
           <li>Delete and re-clone the class repository</li>
@@ -279,32 +279,23 @@
       { "name": "Zambia", "code": "ZM" },
       { "name": "Zimbabwe", "code": "ZW" }
     ]
-    
+
     console.log("List of countries in the world", countries);
-    console.log(countries.length, "this is a array length");
-    
-    
+
   </script>
 
-  <p class="output"></p>
+  <script>
+    //countries = JSON.string(countries)
+  function myfunction(){
 
-  <script>
-    countries = JSON.stringify(countries);
-    for (const = 0; i < json.length; i++){
-     const countries = json[i];
-     console.log(countries, "does this loop over all the countries ??");
-     console.log(countries[88], "anything");
-     
+    for (let i = 0; i < countries.length; i += 1) {
+      console.log(countries[i]);
     }
-  </script>
+    console.log(countries[50]);
   
-  <script>
-    var person = {
-      name:"Emmanuel",
-      age:21
-    }
-    console.log(person.name, "this should show the person element");
-  
+  }
+  document.getElementById("ex").innerHTML = myfunction();
+
   </script>
 
 
