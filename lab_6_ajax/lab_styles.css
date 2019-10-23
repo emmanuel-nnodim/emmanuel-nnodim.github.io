@@ -1,3 +1,4 @@
+
 /* Set document default styles for text */
 body {
   line-height: 1.6;
@@ -19,6 +20,10 @@ h3 {
   font-family: 'Courier New', Courier, monospace;
   color: dimgrey;
 }
+
+li{list-style: circle inside};
+
+
 
 .container {
   position: absolute;
