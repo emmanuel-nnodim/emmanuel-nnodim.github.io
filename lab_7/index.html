@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Test AJAX page</title>
+  <link rel="stylesheet" type="text/css" href="./lab_styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="header">UMD Bus Routes</div>
+      <button class="button" onclick="loadData()">Load Some JSON</button>
+      <div class="content"></div>
+      <div class="footer"></div>
+    </div>
+  </div>
+
+  <script>
+
+
+    function loadData() {
+      fetch('https://api.umd.io/v0/bus/routes') // add a different folder. 
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          return res;
+        }) 
+        .then(res => {
+          for (i = 0; i < res.length; i = i + 1) {
+            
+            document.querySelector(".content").innerHTML += "<li>" + res[i].route_id + " " + res[i].title
+            "</li>"
+          }
+          return res;
+         
+        })
+
+        .then(res => {
+          function UMDBUS(ids) {
+            return ids.route_id === "118";
+
+          }
+          um = res.find(UMDBUS)
+          console.log(um)
+
+          //Use string matching to edit the title property so that it does not contain the same data as the bus route id
+          var str = um.route_id;
+          var re = str.match(um.route_id);
+          var str_replace = str.replace(um.route_id, "")
+          console.log(str_replace)
+          document.querySelector(".header").innerText = "UMD Bus Route " + str_replace + " " + um.title;
+
+        }
+        )
+    }
+  </script>
+</body>
+
+</html>
